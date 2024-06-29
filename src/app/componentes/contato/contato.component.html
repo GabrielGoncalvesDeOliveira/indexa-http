@@ -1,0 +1,17 @@
+<section class="contato">
+    <ul>
+        <li>
+            <strong>{{ nome }}</strong>
+        </li>
+        <li>{{ telefone }}</li>
+        <li>
+            <button>
+                <img [routerLink]="['/formulario', id]" src="/assets/pencil-square.png" alt="icone-lapis">
+            </button>
+            
+            <button [routerLink]="['/perfil-contato', id]">
+                <img src="/assets/trash.png" alt="icone-lixeira">
+            </button>
+        </li>
+    </ul>
+</section>
