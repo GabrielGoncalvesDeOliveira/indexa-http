@@ -4,6 +4,8 @@ import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { Contato } from '../../componentes/contato/contato';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { SeparadorComponent } from '../../componentes/separador/separador.component';
+import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.component';
 
 @Component({
   selector: 'app-perfil-contato',
@@ -11,7 +13,9 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
   imports: [
     CommonModule,
     ContainerComponent,
-    RouterLink
+    RouterLink,
+    SeparadorComponent,
+    CabecalhoComponent
   ],
   templateUrl: './perfil-contato.component.html',
   styleUrl: './perfil-contato.component.css'
@@ -19,11 +23,12 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 export class PerfilContatoComponent implements OnInit {
   contato: Contato = {
     id: 0,
-    nome: 'dev',
-    telefone: '123123213',
-    email: 'dev@gmail.com',
-    aniversario: '11/11/1111',
-    redes: 'dev.com'
+    nome: '',
+    avatar: '',
+    telefone: '',
+    email: '',
+    aniversario: '',
+    redes: ''
   }
 
   constructor(private activatedRoute: ActivatedRoute, private contatoService: ContatoService, private router: Router) {}
